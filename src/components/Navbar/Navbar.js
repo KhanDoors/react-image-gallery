@@ -1,6 +1,6 @@
 import React from "react";
 import "./Navbar.scss";
-import logo from "../../bird1.png";
+import logo from "../../rijksmuseum.jpg";
 
 function Navbar() {
   return (

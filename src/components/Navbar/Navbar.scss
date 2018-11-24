@@ -1,8 +1,8 @@
 @import "../../index.scss";
 
 .navbar {
-  background: $mainBlack;
-  padding: 0.5rem 1rem;
+  background: $mainGrey;
+  padding: 0.1rem 0.5rem;
   display: grid;
   grid-template-columns: auto 1fr;
 }
@@ -16,16 +16,16 @@
 }
 
 .nav-link {
-  color: $mainGrey;
+  color: $Grey;
   text-transform: capitalize;
   text-decoration: none;
   font-size: 1.2rem;
   transition: all 0.3s linear;
   &:hover {
-    color: $mainGreen;
+    color: $nicegreen;
   }
 }
 
 .active {
-  color: $mainGreen;
+  color: $nicegreen;
 }

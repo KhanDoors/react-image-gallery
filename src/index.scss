@@ -4,13 +4,16 @@
   box-sizing: border-box;
 }
 
-$mainBlack: #222;
-$mainGreen: #82b340;
-$mainWhite: #fff;
-$mainGrey: #ececec;
+$mainGrey: #554747;
+$Syyadred: #8b160e;
+$mainWhite: #f9effb;
+$Grey: #ececec;
+$Feltgreen: #318844;
+$nicegreen: #3bac4e;
+$random: #be2e20;
 
 body {
-  background: $mainGrey;
-  color: $mainGreen;
+  background: $Grey;
+  color: $Syyadred;
   font-family: "Playfair Display", serif;
 }
