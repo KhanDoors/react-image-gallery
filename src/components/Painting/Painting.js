@@ -2,13 +2,29 @@ import React, { Component } from "react";
 import "./painting.scss";
 
 class Painting extends Component {
+  state = {
+    showDesc: false
+  };
+
+  handleDesc = () => {
+    this.setState({
+      showDesc: !this.state.showDesc
+    });
+  };
+
   render() {
-    const { artist, img, name, info } = this.props.painting;
+    const { id, artist, img, name, info } = this.props.painting;
+    const { removePainting } = this.props;
     return (
       <article className="painting">
         <div className="img-container">
           <img src={img} alt="" />
-          <span className="close-btn">
+          <span
+            className="close-btn"
+            onClick={() => {
+              removePainting(id);
+            }}
+          >
             <i className="fas fa-window-close" />
           </span>
         </div>
@@ -17,11 +33,11 @@ class Painting extends Component {
           <h4>{name}</h4>
           <h5>
             Description:
-            <span>
+            <span onClick={this.handleDesc}>
               <i className="fas fa-caret-square-down" />
             </span>
           </h5>
-          <p>{info}</p>
+          {this.state.showDesc && <p>{info}</p>}
         </div>
       </article>
     );
