@@ -3,32 +3,25 @@ import "./painting.scss";
 
 class Painting extends Component {
   render() {
+    const { artist, img, name, info } = this.props.painting;
     return (
       <article className="painting">
         <div className="img-container">
-          <img
-            src="https://images.pexels.com/photos/1089147/pexels-photo-1089147.jpeg?auto=compress&cs=tinysrgb&h=350"
-            alt="first"
-          />
+          <img src={img} alt="" />
           <span className="close-btn">
             <i className="fas fa-window-close" />
           </span>
         </div>
         <div className="painting-info">
-          <h3>Artist</h3>
-          <h4>title</h4>
+          <h3>{artist}</h3>
+          <h4>{name}</h4>
           <h5>
-            description
+            Description:
             <span>
               <i className="fas fa-caret-square-down" />
             </span>
           </h5>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, vero
-            reprehenderit? Quam et iste ipsa, tenetur, id architecto suscipit
-            molestiae velit placeat sed tempora facere praesentium neque. Illo,
-            sapiente mollitia.
-          </p>
+          <p>{info}</p>
         </div>
       </article>
     );
